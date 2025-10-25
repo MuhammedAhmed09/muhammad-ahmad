@@ -18,7 +18,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed left-5 translate-y-1/2 flex flex-col space-y-3 bg-Charcoal p-3 rounded-full shadow-lg">
+    <nav className="fixed left-5 translate-y-1/2 flex flex-col space-y-3 dark:bg-Dark-Navy p-3 rounded-full shadow-lg">
       {pageItems.map((item, index) => (
         <div
           key={index}
