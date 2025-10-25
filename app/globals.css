@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-Charcoal: oklch(0.259 0.013 266.3); /* #292F36 */
+  --color-Dark-Navy: oklch(0.196 0.013 266.7); /* #1A1E23 */
+  --color-Vivid-Orange: oklch(0.637 0.233 34.3); /* #E54F26 */
+  --color-Aqua-Neon: oklch(0.888 0.182 174.1); /* #12F7D6 */
+  --color-Bright-Blue: oklch(0.558 0.107 254.9); /* #0C73B8 */
+  --color-Mint-Light: oklch(0.918 0.084 180.1); /* #98FAEC */
+  --color-Golden-Yellow: oklch(0.783 0.166 78.2); /* #E7A020 */
+  --color-Steel-Grey: oklch(0.326 0.014 270.9); /* #43454D */
+  --color-Sky-Blue: oklch(0.728 0.115 231.7); /* #28A9E0 */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: 'IBM', 'Ubuntu', sans-serif;
+}
+
+/* Alexandria Font */
+@font-face {
+  font-family: 'IBM';
+  src: url(/fonts/IBMPlexMono/IBMPlexMono-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url(/fonts/IBMPlexMono/IBMPlexMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(/fonts/Ubuntu/Ubuntu-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(/fonts/Ubuntu/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(/fonts/Ubuntu/Ubuntu-Regular.ttf);
 }
