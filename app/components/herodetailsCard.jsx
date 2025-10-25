@@ -15,7 +15,6 @@ const HeroCardDetails = () => {
         {label: 'JS', href: 'https://javascript.com/'},
         {label: 'REACT', href: 'https://react.dev/'},
         {label: 'NEXT', href: 'https://nextjs.org/'},
-
     ];
 
   return (
@@ -43,6 +42,7 @@ const HeroCardDetails = () => {
                     <Link 
                         key={item.label}    
                         href={item.href}
+                        target='_blank'
                         className='bg-Aqua-Neon rounded-full py-0.5 px-2 text-Charcoal text-sm'
                     >
                         {item.label}

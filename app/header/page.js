@@ -27,7 +27,7 @@ export default function Header () {
   )
 
     return (
-    <section className="flex w-full text-white items-center justify-between bg-Charcoal px-[2%] sm:px-[5%] md:px-[7%] lg:px-[11%] border-b border-Charcoal/30">
+    <section className="flex w-full text-white items-center justify-between bg-Charcoal px-[2%] sm:px-[5%] md:px-[7%] lg:px-[11%]">
       <Link href='/' className="font-bold py-5 inline  md:py-6 lg:py-7"><span className="text-Aqua-Neon">{`<`}</span>muhammadAhmad <span className="text-Aqua-Neon">{`/>`}</span></Link>
       <div className="flex gap-x-7 items-center text-center">
         <div className="flex gap-4">
