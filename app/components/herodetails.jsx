@@ -5,8 +5,8 @@ import React from 'react'
 const HeroDetails = () => {
     const infoItems = [
         {id: 0, number: 4, label: 'Programmin Language'},
-        {id: 0, number: 6, label: `Development Tools`},
-        {id: 0, number: 2, label: 'Years of Experience'},
+        {id: 1, number: 6, label: `Development Tools`},
+        {id: 2, number: 2, label: 'Years of Experience'},
     ]
   return (
     <section className='text-white gap-12 flex flex-col md:flex-row w-full'>
