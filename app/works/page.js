@@ -3,19 +3,22 @@ import Projects from "../components/projectslides";
 export default function Works() {
   
     return (
-     <section id="works" className={`flex py-8 gap-8 flex-col min-h-screen text-white items-center justify-center font-sans bg-[url('/images/works-bg.jpg')] bg-cover bg-no-repeat`}>
+     <section id="works" className={`relative py-8  min-h-screen text-white font-sans bg-[url('/images/works-bg.jpg')] bg-cover bg-center bg-no-repeat`}>
+      <div className="inset-0 z-0 absolute bg-Mint-Light/5"></div>
+      <div className="relative z-10 gap-8 flex items-center justify-center flex-col">
         <div className="hidden md:flex">
           <img src="/images/Scroll.png" alt="scroll" className="w-1/2" />
         </div>
-      <div className="px-[14%] lg:px-[8%]">
-        <div className="items-center gap-4 text-center flex flex-col justify-center">
-          <p className="text-Aqua-Neon text-3xl md:text-4xl">Works</p>
-          <img src="images/line.png" alt="line" className="text-Aqua-Neon w-20 md:w-30" />
-          <p className="text-white/70 text-sm">I had the pleasure of working with these awesome projects</p>
+        <div className="px-[14%] lg:px-[8%]">
+          <div className="items-center gap-4 text-center flex flex-col justify-center">
+            <p className="text-Aqua-Neon text-3xl md:text-4xl">Works</p>
+            <img src="images/line.png" alt="line" className="text-Aqua-Neon w-20 md:w-30" />
+            <p className="text-white/70 text-sm">I had the pleasure of working with these awesome projects</p>
+          </div>
         </div>
-      </div>
-      <div className="w-full md:w-lg">
-        <Projects />
+        <div className="w-full md:w-lg">
+          <Projects />
+        </div>
       </div>
     </section>
     )

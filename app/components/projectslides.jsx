@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -21,11 +21,8 @@ const Projects = ()  => {
     <Swiper
         slidesPerView={1}
         loop={true}
-        pagination={{
-          clickable: true,
-        }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Navigation]}
     >
         {projectItems.map((project) => (
             <SwiperSlide key={project.id} className="w-full px-[2%] sm:px-[4%] md:p-0 ">

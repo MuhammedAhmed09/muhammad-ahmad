@@ -12,13 +12,12 @@ export default function Navbar() {
     { label: "", icon: <LayoutGrid /> },
     { label: "About", icon: <User /> },
     { label: "Skills", icon: <Code /> },
-    { label: "Works", icon: <TvMinimal /> },
-    { label: "Blogs", icon: <SquarePen /> },
+    { label: "Works", icon: <TvMinimal /> },    
     { label: "Contact", icon: <Mail /> },
   ];
 
   return (
-    <nav className="fixed left-5 translate-y-1/2 flex flex-col space-y-3 dark:bg-Dark-Navy p-3 rounded-full shadow-lg">
+    <nav className="fixed left-5 translate-y-1/2 flex flex-col space-y-3 dark:bg-Dark-Navy p-3 rounded-full shadow-lg z-50">
       {pageItems.map((item, index) => (
         <div
           key={index}
