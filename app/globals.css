@@ -41,3 +41,18 @@ body {
     font-family: 'Ubuntu';
     src: url(/fonts/Ubuntu/Ubuntu-Regular.ttf);
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #1A1E23 !important;
+  background: #12F7D6;
+  border-radius: 100%;
+  padding: 14px;
+  font-size: large;
+  font-weight: 700;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #00ff00;
+}
