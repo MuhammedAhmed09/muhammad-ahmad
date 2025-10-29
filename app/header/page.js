@@ -1,11 +1,9 @@
 'use client'
 import { Github, Instagram, Linkedin, Search } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Header () {
-  const pathname = usePathname();
   const [isSearch, setIsSearch] = useState(false);
 
   const sociolItems = [
@@ -22,7 +20,7 @@ export default function Header () {
   )
 
     return (
-    <section className="flex w-full text-white items-center justify-between bg-Charcoal px-[2%] sm:px-[5%] md:px-[7%] lg:px-[11%]">
+    <section className="flex relative w-full z-20 text-white items-center justify-between bg-Charcoal px-[2%] sm:px-[5%] md:px-[7%] lg:px-[11%]">
       <Link href='/' className="font-bold py-5 inline md:py-6 lg:py-7"><span className="text-Aqua-Neon">{`<`}</span>muhammadAhmad <span className="text-Aqua-Neon">{`/>`}</span></Link>
       <div className="flex gap-x-7 items-center text-center">
         <div className="relative">
@@ -47,11 +45,10 @@ export default function Header () {
               href={item.href}
               key={item.label}
               target="_blank"
+              className="flex ml-5 items-center lg:gap-1 lg:hover:scale-105 duration-300 transition-transform cursor-pointer"
             >
-              <div className="flex ml-5 items-center lg:gap-1 lg:hover:scale-105 duration-300 transition-transform">
-                <p className="text-Aqua-Neon text-sm">{item.icon}</p>
-                <p className="hidden lg:block">{item.label}</p>
-              </div>
+              <p className="text-Aqua-Neon text-sm">{item.icon}</p>
+              <p className="hidden lg:block">{item.label}</p>              
             </Link>
           ))}
         </div>

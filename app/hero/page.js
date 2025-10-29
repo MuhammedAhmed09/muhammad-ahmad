@@ -24,8 +24,10 @@ export default function Hero() {
           autoRampDuration={0.6}
         />
       </div>
-      <HeroCardDetails />
-      <HeroDetails />
+      <div className="z-10 flex flex-col lg:flex-row gap-8 items-center justify-center">
+        <HeroCardDetails />
+        <HeroDetails />
+      </div>
     </section>
   )
 }
