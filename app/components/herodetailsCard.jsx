@@ -1,6 +1,7 @@
-import { Briefcase, Download, Link2, Mail, MapPin } from 'lucide-react'
+import { Briefcase, Link2, Mail, MapPin } from 'lucide-react'
 import Link from 'next/link';
 import React from 'react'
+import DownloadCV from './downloadCVbutton';
 
 const HeroCardDetails = () => {
     const infoItems = [
@@ -49,9 +50,7 @@ const HeroCardDetails = () => {
                     </Link>
                 ))}
             </div>
-            <button className='flex items-center gap-2 bg-white rounded-full text-Charcoal font-semibold cursor-pointer py-2 px-4'>
-                Download CV<p><Download /></p>
-            </button>
+            <DownloadCV />
         </div>
     </section>
   )

@@ -2,6 +2,7 @@
 import { Github, Instagram, Linkedin, Search } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import SearchSection from "../components/searchsection";
 
 export default function Header () {
   const [isSearch, setIsSearch] = useState(false);
@@ -12,12 +13,6 @@ export default function Header () {
     {label: 'LinkedIn', icon: <Linkedin />, href: 'https://www.linkedin.com/in/muhammad-a-ragab-a29078307/'},
   ];
 
-  const searchInput = (
-    <input 
-        placeholder="search" 
-        className="bg-white text-Aqua-Neon outline-none placeholder:text-Charcoal font-semibold rounded-full px-2 py-0.5"
-      />
-  )
 
     return (
     <section className="flex relative w-full z-20 text-white items-center justify-between bg-Charcoal px-[2%] sm:px-[5%] md:px-[7%] lg:px-[11%]">
@@ -25,7 +20,7 @@ export default function Header () {
       <div className="flex gap-x-7 items-center text-center">
         <div className="relative">
           <div className="hidden md:flex">
-            {searchInput}
+            <SearchSection />
           </div>
           <button 
             className="md:hidden cursor-pointer translate-y-1 hover:scale-105 duration-300 transition-transform"
@@ -35,7 +30,7 @@ export default function Header () {
           </button>
           {isSearch && (
             <div className="absolute right-0 translate-y-5 translate-x-2">
-              {searchInput}
+              <SearchSection />
             </div>
           )}
         </div>
