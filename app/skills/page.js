@@ -28,10 +28,16 @@ export default function Skills() {
         </div>
         <div className="flex flex-row items-center text-center justify-center flex-wrap gap-8">
           {languageItems.map((item) => (
-            <Link href={item.href} target="_blank" key={item.id} className="flex flex-col flex-wrap gap-2">
+            <a 
+              href={item.href} 
+              target="_blank"
+              rel="noopener noreferrer"
+              key={item.id} 
+              className="flex flex-col flex-wrap gap-2"
+            >
               <img src={item.icon} alt={item.label} className="w-20"/>
               <h3 className={`${item.textColor} text-2xl`}>{item.label}</h3>
-            </Link>
+            </a>
           ))}
         </div>
       </div>

@@ -1,14 +1,13 @@
 import { Briefcase, Link2, Mail, MapPin } from 'lucide-react'
-import Link from 'next/link';
 import React from 'react'
 import DownloadCV from './downloadCVbutton';
 
 const HeroCardDetails = () => {
     const infoItems = [
-        {label: 'muhammedahmedragab@gmail.com', icon: <Mail />},
+        {label: 'E-mail', icon: <Mail />, href: 'mailto:muhammedahmedragab@gmail.com?subject=Job%20Inquiry&body=Hello%20Muhammad,'},
         {label: 'Egypt', icon: <MapPin />},
         {label: 'Full-time / Freelancer', icon: <Briefcase />},
-        {label: 'https://muhammad-ahmad-0.vercel.app/', icon: <Link2 />},
+        {label: 'whats-app', icon: <Link2 />, href: 'http://wa.me/201097182681'},
     ];
     
     const languageItems = [
@@ -32,22 +31,39 @@ const HeroCardDetails = () => {
             </div>
             <div className='flex flex-col gap-4'>
                 {infoItems.map((item) => (
-                    <div key={item.label} className='flex gap-2 justify-start w-full'>
-                        <p className='text-Aqua-Neon'>{item.icon}</p>
-                        <p className='dark:text-white/70'>{item.label}</p>
-                    </div>
+                    item.href ? (
+                        <a 
+                            key={item.label} 
+                            href={item.href}
+                            target='_blank'
+                            rel="noopener noreferrer"
+                            className='flex gap-2 justify-start w-full'
+                        >
+                            <p className='text-Aqua-Neon'>{item.icon}</p>
+                            <p className='dark:text-white/70'>{item.label}</p>
+                        </a>
+                    ) : (
+                        <dev 
+                            key={item.label} 
+                            className='flex gap-2 justify-start w-full'
+                        >
+                            <p className='text-Aqua-Neon'>{item.icon}</p>
+                            <p className='dark:text-white/70'>{item.label}</p>
+                        </dev>
+                    )
                 ))}
             </div>
             <div className='flex gap-2 text-sm'>
                 {languageItems.map((item) => (
-                    <Link 
+                    <a 
                         key={item.label}    
                         href={item.href}
                         target='_blank'
+                        rel="noopener noreferrer"
                         className='bg-Aqua-Neon rounded-full py-0.5 px-2 text-Charcoal text-sm'
                     >
                         {item.label}
-                    </Link>
+                    </a>
                 ))}
             </div>
             <DownloadCV />

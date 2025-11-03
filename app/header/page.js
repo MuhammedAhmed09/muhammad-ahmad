@@ -36,15 +36,16 @@ export default function Header () {
         </div>
         <div className="flex items-center">
           {sociolItems.map((item) => (
-            <Link 
+            <a 
               href={item.href}
               key={item.label}
-              target="_blank"
+              target="_blank"              
+              rel="noopener noreferrer"
               className="flex ml-5 items-center lg:gap-1 lg:hover:scale-105 duration-300 transition-transform cursor-pointer"
             >
               <p className="text-Aqua-Neon text-sm">{item.icon}</p>
               <p className="hidden lg:block">{item.label}</p>              
-            </Link>
+            </a>
           ))}
         </div>
       </div>

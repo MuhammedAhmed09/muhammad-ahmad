@@ -32,21 +32,31 @@ const Projects = ()  => {
                         {project.description}
                     </p>
                     <div className='flex flex-col w-3/5 items-center h-fit sm:text-xl'>
-                        <Link target='_blank' href={project.github} className='absolute top-0'> 
+                        <a 
+                            target='_blank' 
+                            rel="noopener noreferrer"
+                            href={project.github} 
+                            className='absolute top-0'
+                        > 
                             <span className='text-Aqua-Neon font-semibold sm:text-xl'>{`<`}</span>
                             GitHub 
                             <span className='text-Aqua-Neon font-semibold sm:text-xl'>{` />`}</span>
-                        </Link>
+                        </a>
                         <img
                             src={project.image}
                             alt={project.title}
                             className="w-full rounded-2xl p-2 object-cover"
                         />
-                        <Link target='_blank' href={project.demo} className='absolute bottom-0'> 
+                        <a 
+                            target='_blank' 
+                            rel="noopener noreferrer"
+                            href={project.demo} 
+                            className='absolute bottom-0'
+                        > 
                             <span className='text-Aqua-Neon font-semibold sm:text-xl'>{`<`}</span>
                             Demo 
                             <span className='text-Aqua-Neon font-semibold sm:text-xl'>{` />`}</span>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </SwiperSlide>
