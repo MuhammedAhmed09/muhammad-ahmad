@@ -1,6 +1,8 @@
+'use client';
 import { Briefcase, Link2, Mail, MapPin } from 'lucide-react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import DownloadCV from './downloadCVbutton';
+import sal from 'sal.js';
 
 const infoItems = [
     {label: 'E-mail', icon: <Mail />, href: 'mailto:muhammedahmedragab@gmail.com?subject=Job%20Inquiry&body=Hello%20Muhammad,'},
@@ -17,9 +19,17 @@ const languageItems = [
 ];
 
 const HeroCardDetails = () => {
+    useEffect(() => {
+        sal({ threshold: 0.2, once: true });
+    }, []);
 
   return (
-    <section className='border-l-4 border-t-4 border-Aqua-Neon rounded-tl-[154px]'>
+    <section 
+        data-sal="slide-right"
+        data-sal-duration="1000"
+        data-sal-delay="200"
+        className='border-l-4 border-t-4 border-Aqua-Neon rounded-tl-[154px]'
+    >
         <div className='dark:bg-Charcoal text-sm dark:text-white border-4 dark:border-white rounded-br-[150px] rounded-tl-[150px] flex flex-col items-center justify-center gap-5 p-6'>
             <img 
                 src='/images/muhammad-ahmad.jpg' 

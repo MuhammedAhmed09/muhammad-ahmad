@@ -1,7 +1,14 @@
+'use client';
+
 import { ComputerIcon, } from "lucide-react";
-import Link from "next/link";
+import { useEffect } from "react";
+import sal from "sal.js";
 
 export default function Skills() {
+  useEffect(() => {
+    sal({ threshold: 0.2, once: true });
+  }, []);
+
   const languageItems = [
     {id: 0, label: 'HTML', icon: '/images/html.png', href: 'https://html.com/', textColor:'text-Vivid-Orange'},
     {id: 1, label: 'CSS', icon: '/images/css.png', href: 'https://javascript.com/', textColor: 'text-Bright-Blue'},
@@ -10,9 +17,19 @@ export default function Skills() {
   ];
 
     return (
-    <section id="skills" className={`relative py-8  min-h-screen text-white font-sans bg-[url('/images/skills-bg.jpg')] bg-cover bg-center bg-no-repeat`}>
+    <section 
+      id="skills" 
+      className={`
+        relative py-8  min-h-screen text-white font-sans bg-[url('/images/skills-bg.jpg')] bg-cover bg-center bg-no-repeat
+      `}
+    >
       <div className="inset-0 z-0 absolute bg-Charcoal/50"></div>
-      <div className="relative z-10 gap-8 flex items-center justify-center flex-col">
+      <div 
+        data-sal="slide-up"
+        data-sal-duration="1000"
+        data-sal-delay="200"
+        className="relative z-10 gap-8 flex items-center justify-center flex-col"
+      >
         <div className="hidden md:flex">
           <img src="/images/Scroll.png" alt="scroll" className="w-1/2" />
         </div>

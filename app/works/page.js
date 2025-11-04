@@ -1,11 +1,23 @@
+'use client';
+import { useEffect } from "react";
 import Projects from "../components/projectslides";
+import sal from "sal.js";
 
 export default function Works() {
-  
+  useEffect(() => {
+    sal({ threshold: 0.2, once: true });
+  }, []);
+
     return (
      <section id="works" className={`relative py-8  min-h-screen text-white font-sans bg-[url('/images/works-bg.jpg')] bg-cover bg-center bg-no-repeat`}>
       <div className="inset-0 z-0 absolute bg-Mint-Light/5"></div>
-      <div className="relative z-10 gap-8 flex items-center justify-center flex-col">
+
+      <div
+        data-sal="slide-up"
+        data-sal-duration="1000"
+        data-sal-delay="200" 
+        className="relative z-10 gap-8 flex items-center justify-center flex-col"
+      >
         <div className="hidden md:flex">
           <img src="/images/Scroll.png" alt="scroll" className="w-1/2" />
         </div>

@@ -45,13 +45,13 @@ const SearchSection = () => {
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setShowSuggestions(true)}
           onBlur={() => setTimeout(() => setShowSuggestions(false), 150)}
-          placeholder="Search..."
-          className="bg-white text-Charcoal outline-none focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-Charcoal font-semibold rounded-full px-2 py-0.5"
+          placeholder="Search section..."
+          className="bg-Dark-Navy text-white/50 text-sm outline-none focus:outline-none focus:ring-2 focus:ring-Aqua-Neon focus:text-Aqua-Neon placeholder:text-Charcoal font-semibold rounded-full px-2 py-1"
         />
       </form>
 
       {showSuggestions && filteredSections.length > 0 && (
-        <ul className="absolute left-0 right-0 bg-white text-Charcoal border mt-2 overflow-y-auto z-20 max-h-60 rounded-xl shadow-md">
+        <ul className="absolute left-0 right-0 bg-Dark-Navy text-white/40 border mt-2 overflow-y-auto z-20 max-h-60 rounded-xl shadow-md">
           {filteredSections.map((section) => (
             <li
               key={section.id}
@@ -59,7 +59,7 @@ const SearchSection = () => {
                 e.preventDefault(); // to prevent input blur before click
                 handleSelect(section.id);
               }}
-              className="px-4 py-2 hover:bg-Aqua-Neon cursor-pointer"
+              className="px-4 py-2 hover:bg-Aqua-Neon hover:text-Charcoal cursor-pointer"
             >
               {section.name}
             </li>

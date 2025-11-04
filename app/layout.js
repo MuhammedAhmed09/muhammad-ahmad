@@ -1,4 +1,6 @@
 import "./globals.css";
+import 'sal.js/dist/sal.css';
+
 import Navbar from "./navbar/page";
 
 export const metadata = {

@@ -1,8 +1,15 @@
+'use client';
+
 import { Mail } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
+import sal from 'sal.js';
 
 const HeroDetails = () => {
+    useEffect(() => {
+        sal({ threshold: 0.2, once: true });
+    }, []);
+
     const infoItems = [
         {id: 0, number: 4, label: 'Programmin Language'},
         {id: 1, number: 6, label: `Development Tools`},
@@ -10,7 +17,12 @@ const HeroDetails = () => {
     ]
   return (
     <section className='text-white gap-12 flex flex-col md:flex-row w-full'>
-        <div className='flex flex-col gap-8 '>
+        <div
+            data-sal="slide-up"
+            data-sal-duration="1000"
+            data-sal-delay="200"
+            className='flex flex-col gap-8'
+        >
             <div className='text-2xl md:text-3xl'>
                 <span className='text-Aqua-Neon'>{`<h1>`}</span><br />
                 <h1 className='translate-x-5 md:text-4xl'>
@@ -32,7 +44,13 @@ const HeroDetails = () => {
                 <p>Let's Talk</p> <p className='bg-neutral-700 rounded-full p-2'><Mail /></p>
             </Link>
         </div>
-        <div className='w-full flex justify-center'>
+        
+        <div 
+            data-sal="slide-left"
+            data-sal-duration="1000"
+            data-sal-delay="200"
+            className='w-full flex justify-center'
+        >
             <div className='bg-Dark-Navy flex flex-col gap-14 justify-center w-60 h-fit items-center p-10 rounded-[25%]'>
                 {infoItems.map((item) => (
                     <div key={item.id} className='flex gap-3 items-center text-lg text-white/80'>
