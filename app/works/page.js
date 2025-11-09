@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Projects from "../components/projectslides";
 import sal from "sal.js";
 
+
 export default function Works() {
   useEffect(() => {
     sal({ threshold: 0.2, once: true });
