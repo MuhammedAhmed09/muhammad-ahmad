@@ -6,10 +6,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Loading from './loading';
 
 
 const Projects = ()  => {
     const [projectItems, setProjectItems] = useState([]);
+
 
     useEffect(() => {
         fetch('/files/projects.json')
@@ -24,7 +26,7 @@ const Projects = ()  => {
         navigation={true}
         modules={[Navigation]}
     >
-        <Suspense fallback={<h2 className='text-2xl bg-white text-Charcoal font-semibold p-3'></h2>}>
+        <Suspense fallback={<Loading />}>
             {projectItems.map((project) => (
                 <SwiperSlide key={project.id} className="w-full px-[2%] sm:px-[4%] md:p-0 ">
                     <div className="flex items-center flex-row justify-center gap-4 px-[12%] sm:px-[14%]">
