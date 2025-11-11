@@ -12,35 +12,6 @@
   --color-Sky-Blue: oklch(0.728 0.115 231.7); /* #28A9E0 */
 }
 
-body {
-    font-family: 'IBM', 'Ubuntu', sans-serif;
-}
-
-/* Alexandria Font */
-@font-face {
-  font-family: 'IBM';
-  src: url(/fonts/IBMPlexMono/IBMPlexMono-Medium.ttf);
-}
-
-@font-face {
-    font-family: 'IBM';
-    src: url(/fonts/IBMPlexMono/IBMPlexMono-Regular.ttf);
-}
-
-@font-face {
-    font-family: 'Ubuntu';
-    src: url(/fonts/Ubuntu/Ubuntu-Light.ttf);
-}
-
-@font-face {
-    font-family: 'Ubuntu';
-    src: url(/fonts/Ubuntu/Ubuntu-Medium.ttf);
-}
-
-@font-face {
-    font-family: 'Ubuntu';
-    src: url(/fonts/Ubuntu/Ubuntu-Regular.ttf);
-}
 
 .swiper-button-next,
 .swiper-button-prev {

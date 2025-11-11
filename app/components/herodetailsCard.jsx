@@ -3,6 +3,7 @@ import { Briefcase, Link2, Mail, MapPin } from 'lucide-react'
 import React, { useEffect } from 'react'
 import DownloadCV from './downloadCVbutton';
 import sal from 'sal.js';
+import Image from 'next/image';
 
 const infoItems = [
     {label: 'E-mail', icon: <Mail />, href: 'mailto:muhammedahmedragab@gmail.com?subject=Job%20Inquiry&body=Hello%20Muhammad,'},
@@ -31,11 +32,12 @@ const HeroCardDetails = () => {
         className='border-l-4 border-t-4 border-Aqua-Neon rounded-tl-[154px]'
     >
         <div className='dark:bg-Charcoal text-sm dark:text-white border-4 dark:border-white rounded-br-[150px] rounded-tl-[150px] flex flex-col items-center justify-center gap-5 p-6'>
-            <img 
+            <Image 
                 src='/images/muhammad-ahmad.jpg' 
                 alt='Portrait of Muhammad Ahmad, front-end developer'
-                className='w-20 h-20 rounded-full border-2 border-Aqua-Neon'
-                loading='lazy'
+                className='rounded-full border-2 border-Aqua-Neon'
+                width={100}
+                height={100}
             />
             <div className='items-center text-center'>
                 <h1 className='font-bold sm:text-xl md:text-3xl'>Muhammad</h1>

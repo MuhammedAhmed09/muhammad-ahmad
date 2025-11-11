@@ -1,5 +1,6 @@
 import "./globals.css";
 import 'sal.js/dist/sal.css';
+import ubuntu from '@/app/ui/fonts';
 
 import Navbar from "./navbar/page";
 
@@ -11,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={ubuntu}>
         <Navbar />
         {children}
       </body>

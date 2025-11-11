@@ -1,8 +1,10 @@
 'use client';
 
 import { ComputerIcon, } from "lucide-react";
+import Image from "next/image";
 import { useEffect } from "react";
 import sal from "sal.js";
+import { LineImage, ScrollImage } from "../components/images";
 
 export default function Skills() {
   useEffect(() => {
@@ -31,11 +33,11 @@ export default function Skills() {
         className="relative z-10 gap-8 flex items-center justify-center flex-col"
       >
         <div className="hidden md:flex">
-          <img src="/images/Scroll.png" alt="scroll" className="w-1/2" />
+          <ScrollImage />
         </div>
         <div className="items-center gap-4 text-center flex flex-col justify-center">
           <p className="text-Aqua-Neon text-3xl md:text-4xl">Skills</p>
-          <img src="images/line.png" alt="line" className="text-Aqua-Neon w-20 md:w-30" />
+          <LineImage />
           <p className="text-white/70 text-sm">I am striving to never stop learning and improving</p>
         </div>
         <div className="flex flex-col gap-2 items-center justify-center bg-Mint-Light text-Dark-Navy border-l-4 border-Bright-Blue rounded-lg py-2 px-4">
@@ -52,7 +54,12 @@ export default function Skills() {
               key={item.id} 
               className="flex flex-col flex-wrap gap-2"
             >
-              <img src={item.icon} alt={item.label} className="w-20"/>
+              <Image 
+                src={item.icon} 
+                alt={item.label} 
+                width={100}
+                height={100}
+              />
               <h3 className={`${item.textColor} text-2xl`}>{item.label}</h3>
             </a>
           ))}

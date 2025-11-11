@@ -1,7 +1,9 @@
 'use client';
 
+import Image from "next/image";
 import { useEffect } from "react";
 import sal from "sal.js";
+import { ScrollImage } from "../components/images";
 
 export default function About() {
   useEffect(() => {
@@ -21,7 +23,7 @@ export default function About() {
           data-sal-delay="200"
           className="hidden md:flex"
         >
-          <img src="/images/Scroll.png" alt="scroll" className="w-1/2" />
+          <ScrollImage />
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 w-full justify-center">
@@ -53,10 +55,12 @@ export default function About() {
             data-sal-delay="200"
             className="flex justify-center"
           >
-            <img 
+            <Image 
               src="/images/muhammad-ahmad2.jpg" 
-              alt="my-photo Muhammad"
-              className="rounded-4xl w-66 lg:min-w-66"
+              alt="portfolio image for Muhammad Ahmad"
+              className="rounded-4xl lg:min-w-66"
+              width={500}
+              height={700}
             />
           </div>
         </div>
