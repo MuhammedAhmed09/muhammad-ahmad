@@ -28,10 +28,10 @@ export default function About() {
 
         <div className="flex flex-col lg:flex-row gap-8 w-full justify-center">
           <div 
+            className="flex flex-col gap-8"
             data-sal="slide-right"
             data-sal-duration="1000"
             data-sal-delay="200"
-            className="flex flex-col gap-8"
           >
             <p className="text-center sm:justify-start w-fit bg-Charcoal text-xl md:text-3xl py-2 px-8 border-4 border-Aqua-Neon rounded-tl-4xl rounded-br-4xl">
               About me
@@ -50,10 +50,10 @@ export default function About() {
           </div>
 
           <div 
+            className="flex justify-center"
             data-sal="slide-left"
             data-sal-duration="1000"
             data-sal-delay="200"
-            className="flex justify-center"
           >
             <Image 
               src="/images/muhammad-ahmad2.jpg" 

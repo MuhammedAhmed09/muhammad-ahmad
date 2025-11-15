@@ -6,8 +6,9 @@ export const ScrollImage = () => {
       src="/images/Scroll.png" 
       alt="scroll icon"
       className="w-auto h-auto"
-      width={20} 
-      height={20}
+      width={10}
+      height={10}
+      sizes='20' 
     />
   )
 };
