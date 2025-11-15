@@ -13,8 +13,7 @@ export default function Header () {
     {label: 'LinkedIn', icon: <Linkedin />, href: 'https://www.linkedin.com/in/muhammad-a-ragab-a29078307/'},
   ];
 
-
-    return (
+  return (
     <section className="flex relative w-full z-20 text-white items-center justify-between bg-Charcoal px-[2%] sm:px-[5%] md:px-[7%] lg:px-[11%]">
       <Link href='/' className="font-bold py-5 inline md:py-6 lg:py-7"><span className="text-Aqua-Neon">{`<`}</span>muhammadAhmad <span className="text-Aqua-Neon">{`/>`}</span></Link>
       <div className="flex gap-x-7 items-center text-center">
@@ -50,5 +49,5 @@ export default function Header () {
         </div>
       </div>
     </section>
-    )
+  )
 }

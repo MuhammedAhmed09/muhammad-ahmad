@@ -2,7 +2,6 @@
 
 import { Code, LayoutGrid, Mail, SquarePen, TvMinimal, User } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -29,7 +28,7 @@ export default function Navbar() {
             href={`#${item.label.toLowerCase()}`}
             scroll={true}
             className={`text-white text-xl cursor-pointer`}
-          >
+          > 
             {item.icon}
           </Link>
 

@@ -13,16 +13,16 @@ export default function Skills() {
 
   const languageItems = [
     {id: 0, label: 'HTML', icon: '/images/html.png', href: 'https://html.com/', textColor:'text-Vivid-Orange'},
-    {id: 1, label: 'CSS', icon: '/images/css.png', href: 'https://javascript.com/', textColor: 'text-Bright-Blue'},
-    {id: 2, label: 'JS', icon: '/images/js.png', href: 'https://react.dev/', textColor: 'text-Golden-Yellow'},
-    {id: 3, label: 'REACT', icon: '/images/react.png', href: 'https://nextjs.org/', textColor: 'text-Sky-Blue'},
+    {id: 1, label: 'CSS', icon: '/images/css.png', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS', textColor: 'text-Bright-Blue'},
+    {id: 2, label: 'JS', icon: '/images/js.png', href: 'https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting', textColor: 'text-Golden-Yellow'},
+    {id: 3, label: 'REACT', icon: '/images/react.png', href: 'https://react.dev/', textColor: 'text-Sky-Blue'},
   ];
 
     return (
     <section 
       id="skills" 
       className={`
-        relative py-8  min-h-screen text-white font-sans bg-[url('/images/skills-bg.jpg')] bg-cover bg-center bg-no-repeat
+        relative py-8 min-h-screen text-white font-sans bg-[url('/images/skills-bg.jpg')] bg-cover bg-center bg-no-repeat
       `}
     >
       <div className="inset-0 z-0 absolute bg-Charcoal/50"></div>
