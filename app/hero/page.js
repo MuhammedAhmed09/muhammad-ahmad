@@ -1,6 +1,8 @@
+import { Suspense } from "react";
 import LiquidEther from "../components/bgliquidether";
 import HeroDetails from "../components/herodetails";
 import HeroCardDetails from "../components/herodetailsCard";
+import { HeroCardDetailsSkeleton, HeroDetailsSkeleton } from "../ui/skeletons";
 
 export default function Hero() {
   return (
@@ -25,8 +27,12 @@ export default function Hero() {
         />
       </div>
       <div className="z-10 flex flex-col lg:flex-row gap-8 items-center justify-center">
-        <HeroCardDetails />
-        <HeroDetails />
+        <Suspense fallback={<HeroCardDetailsSkeleton />}>
+          <HeroCardDetails />
+        </Suspense>
+        <Suspense fallback={<HeroDetailsSkeleton />} >
+          <HeroDetails />   
+        </Suspense>
       </div>
     </section>
   )

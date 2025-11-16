@@ -108,6 +108,19 @@ const scrollImageSkeleton = (
     </div>
 );
 
+const titleOfPage = (
+    <div className="flex flex-col gap-6 items-center">
+        <div className="w-44 h-10 p-4 rounded-2xl bg-gray-200" >
+            <div className="w-full rounded-full h-4 place-self-center bg-gray-50"/>
+        </div>
+        <div className="flex flex-row items-center">
+            <div className="w-2 h-2 bg-gray-200 rounded-full"/>
+            <div className="w-48 h-1 bg-gray-200 rounded-2xl" />
+            <div className="w-2 h-2 bg-gray-200 rounded-full" />
+        </div>
+    </div>
+)
+
 export function AboutSkeleton() {
     
     return(
@@ -135,6 +148,94 @@ export function AboutSkeleton() {
                     </div>
                 </div>
             </div>
+        </div>
+    )
+};
+
+export function SkillsSkeleton() {
+    const language = (
+        <div className="flex flex-col gap-2 items-center"> 
+            <div className="flex items-center justify-center rounded-full p-10 bg-gray-50">
+                <div className="h-6 w-6 bg-gray-200 rounded-sm"/>
+            </div>
+            <div className="bg-gray-200 h-3 w-10 rounded-xl"/>
+        </div>
+    )
+    return(
+        <div className={`${shimmer} w-full items-center relative shadow-sm bg-white py-20 flex flex-col gap-4`}>
+            {scrollImageSkeleton}
+            {titleOfPage}
+            <div className="w-96 h-4 rounded-full bg-gray-100"/>
+            <div className="bg-gray-50 rounded-2xl p-4 border-l-4 flex flex-col gap-3 border-gray-200">
+                <div className="h-10 w-12 bg-gray-200 rounded-xl" />
+                <div className="h-1 w-12 bg-gray-200 rounded-xl" />
+                <div className="h-2 w-70 bg-gray-200 rounded-xl" />
+                <div className="flex flex-row gap-1 items-center w-full justify-center">
+                    <div className="h-4 w-12 bg-gray-200 rounded-2xl"/>
+                    <div className="h-1 w-1 bg-gray-200 rounded-full" />
+                    <div className="h-4 w-12 bg-gray-200 rounded-2xl"/>
+                    <div className="h-1 w-1 bg-gray-200 rounded-full" />
+                    <div className="h-4 w-12 bg-gray-200 rounded-2xl"/>
+                    <div className="h-1 w-1 bg-gray-200 rounded-full" />
+                    <div className="h-4 w-12 bg-gray-200 rounded-2xl"/>
+                </div>
+            </div>
+            <div className="flex gap-3 flex-wrap overflow-hidden">
+                {language}
+                {language}
+                {language}
+                {language}
+            </div>
+        </div>
+    )
+};
+
+export function WorksSkeleton() {
+    return (
+        <div className={`${shimmer} w-full items-center relative shadow-sm bg-white py-20 flex flex-col gap-4`}>
+            {scrollImageSkeleton}
+            {titleOfPage}
+            <div className="w-96 h-4 rounded-full bg-gray-100"/>
+            <div className="flex flex-row items-center overflow-hidden gap-6 mt-6">
+                <div className="h-8 w-8 bg-gray-200 rounded-full"/>
+                <div className="bg-gray-50 p-4 flex flex-col gap-2 rounded-xl">
+                    <div className="w-20 h-3 bg-gray-100"/>
+                    <div className="w-18 h-3 bg-gray-100"/>
+                    <div className="w-15 h-3 bg-gray-100"/>
+                    <div className="w-20 h-3 bg-gray-100"/>
+                    <div className="w-18 h-3 bg-gray-100"/>
+                    <div className="w-15 h-3 bg-gray-100"/>
+                </div>
+                <div className="flex flex-col items-center gap-8">
+                    <div className="w-24 h-4 bg-gray-200 rounded-xl" />
+                    <div className="w-32 h-14 bg-gray-100 rounded-xl" />
+                    <div className="w-24 h-4 bg-gray-200 rounded-xl" />
+                </div>
+                <div className="h-8 w-8 bg-gray-200 rounded-full"/>
+            </div>
+        </div>
+    )
+};
+
+export function ContactSkeleton() {
+    const input = (
+        <div className="flex w-full items-center bg-gray-100 p-2 rounded-xl">
+            <div className="w-full h-4 bg-gray-200 rounded-2xl" />
+        </div>
+    )
+    return (
+        <div className={`${shimmer} w-full items-center relative shadow-sm bg-white py-20 flex flex-col gap-4 overflow-hidden`}>
+            {scrollImageSkeleton}
+            {titleOfPage}
+            <div className="w-96 h-4 rounded-full bg-gray-100"/>
+            <div className="border-2 border-gray-200 rounded-tl-4xl p-6 rounded-br-4xl overflow-hidden bg-gray-50 flex items-center">
+                <div className="bg-gray-200 w-48 h-2 rounded-xl"/>
+            </div>
+            <div className="flex flex-col md:flex-row gap-8 self-center justify-center w-full md:w-sm">
+                <div className="w-full">{input}</div>
+                <div className="w-full">{input}</div>
+            </div>
+            <div className="w-full md:w-sm">{input}</div>
         </div>
     )
 };
