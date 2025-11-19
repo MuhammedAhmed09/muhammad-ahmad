@@ -1,6 +1,6 @@
 import * as motion from "motion/react-client"
 
-export default function Loading() {
+export default function FirsLoadAnimation() {
     return (
         <motion.div
             animate={{

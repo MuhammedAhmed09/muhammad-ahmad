@@ -1,7 +1,7 @@
 'use client';
 import { Briefcase, Link2, Mail, MapPin } from 'lucide-react'
 import React, { useEffect } from 'react'
-import DownloadCV from './downloadCVbutton';
+import DownloadCV from './download-cv-button';
 import sal from 'sal.js';
 import Image from 'next/image';
 

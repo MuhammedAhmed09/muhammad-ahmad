@@ -1,8 +1,9 @@
+import LiquidEther from "@/app/ui/bg-liquid-ether";
+import HeroDetails from "@/app/ui/hero/hero-details";
+import HeroCardDetails from "@/app/ui/hero/hero-details-Card";
+import { HeroCardDetailsSkeleton, HeroDetailsSkeleton } from "@/app/ui/skeletons";
 import { Suspense } from "react";
-import LiquidEther from "../components/bgliquidether";
-import HeroDetails from "../components/herodetails";
-import HeroCardDetails from "../components/herodetailsCard";
-import { HeroCardDetailsSkeleton, HeroDetailsSkeleton } from "../ui/skeletons";
+
 
 export default function Hero() {
   return (

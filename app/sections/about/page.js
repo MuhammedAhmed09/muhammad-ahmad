@@ -1,9 +1,9 @@
 'use client';
 
+import { ScrollImage } from "@/app/ui/images";
 import Image from "next/image";
 import { useEffect } from "react";
 import sal from "sal.js";
-import { ScrollImage } from "../components/images";
 
 export default function About() {
   useEffect(() => {

@@ -1,6 +1,5 @@
-import Image from "next/image";
-import SubmitForm from "../components/submitedcontactform";
-import { LineImage, ScrollImage } from "../components/images";
+import SubmitForm from "@/app/ui/contact/submited-contact-form";
+import { LineImage, ScrollImage } from "@/app/ui/images";
 
 export default function Contact() {
     return (

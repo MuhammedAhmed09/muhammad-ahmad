@@ -92,6 +92,15 @@ export function HeroDetailsSkeleton() {
     )
 };
 
+export default function FirstLoadSkeleton() {
+    return(
+        <div className="flex flex-col md:flex-row justify-between">
+            <HeroCardDetailsSkeleton />
+            <HeroDetailsSkeleton />
+        </div>
+    )
+}
+
 const scrollImageSkeleton = (
     <div className="flex flex-col items-center gap-2">
         <div className="flex flex-col p-1 bg-white h-12 w-6 border-2 border-gray-200 rounded-2xl">

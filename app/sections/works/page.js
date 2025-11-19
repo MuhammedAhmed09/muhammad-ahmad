@@ -1,8 +1,8 @@
 'use client';
 import { useEffect } from "react";
-import Projects from "../components/projectslides";
 import sal from "sal.js";
-import { LineImage, ScrollImage } from "../components/images";
+import { LineImage, ScrollImage } from "@/app/ui/images";
+import Projects from "@/app/ui/works/projects-slides";
 
 export default function Works() {
   useEffect(() => {

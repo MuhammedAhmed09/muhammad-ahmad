@@ -1,8 +1,8 @@
 import "./globals.css";
 import 'sal.js/dist/sal.css';
 import ubuntu from '@/app/ui/fonts';
+import Navbar from "./components/side-nav/page";
 
-import Navbar from "./navbar/page";
 
 export const metadata = {
   title: "Muhammad Ahmad",

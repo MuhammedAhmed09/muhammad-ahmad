@@ -4,7 +4,7 @@ import { ComputerIcon, } from "lucide-react";
 import Image from "next/image";
 import { useEffect } from "react";
 import sal from "sal.js";
-import { LineImage, ScrollImage } from "../components/images";
+import { LineImage, ScrollImage } from "@/app/ui/images";
 
 export default function Skills() {
   useEffect(() => {

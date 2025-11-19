@@ -2,7 +2,7 @@
 import { Github, Instagram, Linkedin, Search } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import SearchSection from "../components/searchsection";
+import SearchSection from "../../ui/header/search-section";
 
 export default function Header () {
   const [isSearch, setIsSearch] = useState(false);

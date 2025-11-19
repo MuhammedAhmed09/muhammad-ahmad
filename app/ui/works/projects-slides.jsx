@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Loading from './loading';
+import Loading from '@/app/sections/(overview)/loading';
 
 
 const Projects = ()  => {
