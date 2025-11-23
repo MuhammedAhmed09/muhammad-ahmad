@@ -46,7 +46,7 @@ const SearchSection = () => {
           onFocus={() => setShowSuggestions(true)}
           onBlur={() => setTimeout(() => setShowSuggestions(false), 150)}
           placeholder="Search section..."
-          className="bg-Dark-Navy text-white/50 text-sm outline-none focus:outline-none focus:ring-2 focus:ring-Aqua-Neon focus:text-Aqua-Neon placeholder:text-Charcoal font-semibold rounded-full px-2 py-1"
+          className="bg-Dark-Navy text-sm outline-none focus:ring-2 focus:ring-Aqua-Neon focus:text-Aqua-Neon placeholder:text-white/60 font-semibold rounded-full px-2 py-1"
         />
       </form>
 

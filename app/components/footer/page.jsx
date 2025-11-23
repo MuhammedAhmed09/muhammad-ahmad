@@ -23,7 +23,7 @@ const Footer = () => {
                 </Link>
             ))}
         </div>
-        <div className="md:flex grid gap-8 md:gap-x-20">
+        <div className="md:flex gap-8 md:gap-x-20">
             <p>© 2025 MuhammadAhmad. All rights reserved.</p>
             <div className="flex justify-center gap-x-8 sm:gap-x-20">
                 <p>Privacy Policy</p>

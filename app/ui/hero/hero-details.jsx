@@ -1,14 +1,7 @@
-'use client';
-
 import { Mail } from 'lucide-react'
 import Link from 'next/link'
-import React, { useEffect } from 'react'
-import sal from 'sal.js';
 
 const HeroDetails = () => {
-    useEffect(() => {
-        sal({ threshold: 0.2, once: true });
-    }, []);
 
     const infoItems = [
         {id: 0, number: 4, label: 'Programmin Language'},
@@ -18,9 +11,6 @@ const HeroDetails = () => {
   return (
     <section className='text-white gap-12 flex flex-col md:flex-row w-full'>
         <div
-            data-sal="slide-up"
-            data-sal-duration="1000"
-            data-sal-delay="200"
             className='flex flex-col gap-8'
         >
             <div className='text-2xl md:text-3xl'>
@@ -46,9 +36,6 @@ const HeroDetails = () => {
         </div>
         
         <div 
-            data-sal="slide-left"
-            data-sal-duration="1000"
-            data-sal-delay="200"
             className='w-full flex justify-center'
         >
             <div className='bg-Dark-Navy flex flex-col gap-14 justify-center w-60 h-fit items-center p-10 rounded-[25%]'>

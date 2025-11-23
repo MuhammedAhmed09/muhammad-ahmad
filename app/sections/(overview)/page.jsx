@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Hero from "../hero/page";
-import FirstLoadSkeleton, {  
+import {
+    HeroSkeleton,  
     AboutSkeleton, 
     ContactSkeleton, 
     SkillsSkeleton, 
@@ -14,7 +15,7 @@ import Contact from "../contact/page";
 export default function Page() {
     return (
         <main>
-            <Suspense fallback={<FirstLoadSkeleton />}>
+            <Suspense fallback={<HeroSkeleton />}>
                 <Hero />
             </Suspense>
             

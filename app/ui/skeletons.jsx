@@ -1,6 +1,60 @@
 // LOADING ANIMATION
 const shimmer = 'before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent';
 
+export function HeaderSkeleton() {
+    const linksMenu = (
+        <div className="flex items-center ml-5 lg:gap-1">
+            <div className="w-6 h-6 bg-gray-100 rounded-sm"/>
+            <div className="w-16 h-4 bg-gray-100 rounded-sm"/>
+        </div>
+    )
+    return(
+        <section className={`${shimmer} flex text-center w-full items-center justify-between px-[2%] sm:px-[5%] md:px-[7%] lg:px-[11%] relative shadow-sm border-b-2 border-gray-100`} >
+            <div className="inline-flex py-5 lg:py-7 items-center">
+                <span className="text-gray-300">{`<`}</span>
+                <div className="w-40 h-4 rounded-full bg-gray-100"/>
+                <span className="text-gray-300">{`/>`}</span>
+            </div>
+            <div className="flex gap-x-7 items-center">
+                <div className="relative">
+                    <div className="hidden md:flex rounded-full h-6 w-48 bg-gray-100"/>
+                    <div className="relative md:hidden">
+                        <div className="w-5 h-5 border-3 border-gray-200 bg-white rounded-full"/>
+                        <div className="w-3 h-0.5 bg-gray-200 absolute -right-2 -bottom-1 rotate-45" />
+                    </div>
+                </div>
+                <div className="flex items-center">
+                    {linksMenu}
+                    {linksMenu}
+                    {linksMenu}
+                </div>
+            </div>
+        </section>
+    );
+}
+
+export function FooterSkeleton() {
+    const linksMenu = (
+        <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100">
+            <div className="w-5 h-5 rounded-sm bg-gray-200"/>
+        </div>
+    )
+    return(
+        <section className={`${shimmer} flex justify-center items-center w-full relative shadow-sm border-t-2 border-gray-100 lg:gap-20 gap-8 py-8 `} >
+            <div className="md:flex gap-8 md:gap-x-20">
+                <div className="w-72 h-4 bg-gray-100 rounded-full"/>
+                <div className="w-32 h-4 bg-gray-100 rounded-full"/>
+                <div className="w-44 h-4 bg-gray-100 rounded-full"/>
+            </div>
+            <div className="flex gap-8" >
+                {linksMenu}
+                {linksMenu}
+                {linksMenu}
+            </div>
+        </section>
+    )
+}
+
 export function HeroCardDetailsSkeleton() {
     const infoItemsSkeleton = (
         <div className='flex gap-2 items-start' >
@@ -92,9 +146,9 @@ export function HeroDetailsSkeleton() {
     )
 };
 
-export default function FirstLoadSkeleton() {
+export function HeroSkeleton() {
     return(
-        <div className="flex flex-col md:flex-row justify-between">
+        <div className="flex flex-col px-[14%] lg:px-[8%] py-8 gap-8 lg:flex-row min-h-screen items-center justify-center">
             <HeroCardDetailsSkeleton />
             <HeroDetailsSkeleton />
         </div>

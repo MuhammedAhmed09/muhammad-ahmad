@@ -11,8 +11,6 @@ import Loading from '@/app/sections/(overview)/loading';
 
 const Projects = ()  => {
     const [projectItems, setProjectItems] = useState([]);
-
-
     useEffect(() => {
         fetch('/files/projects.json')
         .then((res) => res.json())

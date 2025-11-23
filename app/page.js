@@ -1,13 +1,19 @@
+import { Suspense } from "react";
 import Footer from "./components/footer/page";
 import Header from "./components/header/page";
-import Page from "./sections/(overview)/page";
+import OverviewPage from "./sections/(overview)/page";
+import { FooterSkeleton, HeaderSkeleton } from "./ui/skeletons";
 
-export default function Home() {
+export default function Page() {
   return (
-    <>
-      <Header />
-      <Page />
-      <Footer />
-    </>
+    <main>
+      <Suspense fallback={<HeaderSkeleton />}>
+        <Header />
+      </Suspense>
+      <OverviewPage />
+      <Suspense fallback={<FooterSkeleton />}>
+        <Footer />
+      </Suspense>
+    </main>
   );
 }

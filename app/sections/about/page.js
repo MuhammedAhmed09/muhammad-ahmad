@@ -1,14 +1,7 @@
-'use client';
-
 import { ScrollImage } from "@/app/ui/images";
 import Image from "next/image";
-import { useEffect } from "react";
-import sal from "sal.js";
 
 export default function About() {
-  useEffect(() => {
-    sal({ threshold: 0.2, once: true });
-  }, []);
 
     return (
     <section id="about" className={`relative py-8 px-[14%] lg:px-[8%] min-h-screen text-white font-sans bg-[url('/images/about-bg.jpg')]`}>
@@ -18,9 +11,6 @@ export default function About() {
 
       <div className="flex gap-8 flex-col items-center justify-center relative z-10">
         <div
-          data-sal="slide-up"
-          data-sal-duration="1000"
-          data-sal-delay="200"
           className="hidden md:flex"
         >
           <ScrollImage />
@@ -29,9 +19,6 @@ export default function About() {
         <div className="flex flex-col lg:flex-row gap-8 w-full justify-center">
           <div 
             className="flex flex-col gap-8"
-            data-sal="slide-right"
-            data-sal-duration="1000"
-            data-sal-delay="200"
           >
             <p className="text-center sm:justify-start w-fit bg-Charcoal text-xl md:text-3xl py-2 px-8 border-4 border-Aqua-Neon rounded-tl-4xl rounded-br-4xl">
               About me

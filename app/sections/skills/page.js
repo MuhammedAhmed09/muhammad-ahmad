@@ -1,15 +1,8 @@
-'use client';
-
 import { ComputerIcon, } from "lucide-react";
 import Image from "next/image";
-import { useEffect } from "react";
-import sal from "sal.js";
 import { LineImage, ScrollImage } from "@/app/ui/images";
 
 export default function Skills() {
-  useEffect(() => {
-    sal({ threshold: 0.2, once: true });
-  }, []);
 
   const languageItems = [
     {id: 0, label: 'HTML', icon: '/images/html.png', href: 'https://html.com/', textColor:'text-Vivid-Orange'},
@@ -27,9 +20,6 @@ export default function Skills() {
     >
       <div className="inset-0 z-0 absolute bg-Charcoal/50"></div>
       <div 
-        data-sal="slide-up"
-        data-sal-duration="1000"
-        data-sal-delay="200"
         className="relative z-10 gap-8 flex items-center justify-center flex-col"
       >
         <div className="hidden md:flex">

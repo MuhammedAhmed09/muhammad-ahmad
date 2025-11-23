@@ -1,5 +1,9 @@
-import FirstLoadSkeleton from "@/app/ui/skeletons";
+import FirsLoadAnimation from "@/app/components/first-load-animation"
 
-export default function Loading() {
-    return <FirstLoadSkeleton />
+const Loading = () => {
+  return (
+    <div><FirsLoadAnimation/></div>
+  )
 }
+
+export default Loading
