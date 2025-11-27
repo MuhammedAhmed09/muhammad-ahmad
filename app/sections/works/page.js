@@ -21,7 +21,7 @@ export default function Works() {
             </p>
           </div>
         </div>
-        <div className="w-full md:w-lg">
+        <div>
           <Projects />
         </div>
       </div>

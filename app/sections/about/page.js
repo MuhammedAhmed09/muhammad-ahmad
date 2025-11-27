@@ -32,18 +32,14 @@ export default function About() {
             </div>
           </div>
 
-          <div 
-            className="flex justify-center"
-            data-sal="slide-left"
-            data-sal-duration="1000"
-            data-sal-delay="200"
-          >
+          <div className="flex justify-center">
             <Image 
               src="/images/muhammad-ahmad2.jpg" 
               alt="portfolio image for Muhammad Ahmad"
-              className="rounded-4xl lg:min-w-66"
+              className="rounded-4xl h-auto"
               width={500}
               height={700}
+              loading="eager"
             />
           </div>
         </div>

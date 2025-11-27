@@ -29,6 +29,7 @@ const HeroCardDetails = () => {
                 className='rounded-full border-2 border-Aqua-Neon'
                 width={100}
                 height={100}
+                loading="eager"
             />
             <div className='items-center text-center'>
                 <h1 className='font-bold sm:text-xl md:text-3xl'>Muhammad</h1>

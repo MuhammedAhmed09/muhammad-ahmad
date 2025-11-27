@@ -5,12 +5,12 @@ import ScrollDown from "@/app/ui/scroll-down-icon";
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen grid gap-4 font-sans justify-center items-center">
+    <section id="hero" className="min-h-screen relative grid gap-4 font-sans justify-center items-center">
       <div className="flex flex-col md:flex-row items-center justify-center gap-4">
           <HeroCardDetails />
           <HeroDetails />  
       </div>
-      <div>
+      <div className="hidden md:flex">
         <ScrollDown pageToScroll={'about'}/>
       </div>
     </section>
