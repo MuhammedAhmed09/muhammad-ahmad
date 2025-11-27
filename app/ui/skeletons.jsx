@@ -150,7 +150,7 @@ export function HeroDetailsSkeleton() {
 
 export function HeroSkeleton() {
     return(
-        <div className="flex flex-col px-[14%] lg:px-[8%] py-8 gap-8 lg:flex-row min-h-screen items-center justify-center">
+        <div className="flex flex-col md:flex-row px-[14%] md:px-[8%] py-8 gap-8 min-h-screen items-center justify-center">
             <HeroCardDetailsSkeleton />
             <HeroDetailsSkeleton />
         </div>
@@ -255,29 +255,35 @@ export function SkillsSkeleton() {
     )
 };
 
+export function ProjectSlideSkeleton() {
+    return (
+        <div className="flex flex-row items-center overflow-hidden gap-6 mt-6">
+            <div className="h-8 w-8 bg-gray-200 rounded-full"/>
+            <div className="bg-gray-50 p-4 flex flex-col gap-2 rounded-xl">
+                <div className="w-20 h-3 bg-gray-100"/>
+                <div className="w-18 h-3 bg-gray-100"/>
+                <div className="w-15 h-3 bg-gray-100"/>
+                <div className="w-20 h-3 bg-gray-100"/>
+                <div className="w-18 h-3 bg-gray-100"/>
+                <div className="w-15 h-3 bg-gray-100"/>
+            </div>
+            <div className="flex flex-col items-center gap-8">
+                <div className="w-24 h-4 bg-gray-200 rounded-xl" />
+                <div className="w-32 h-14 bg-gray-100 rounded-xl" />
+                <div className="w-24 h-4 bg-gray-200 rounded-xl" />
+            </div>
+            <div className="h-8 w-8 bg-gray-200 rounded-full"/>
+        </div>
+    )
+}
+
 export function WorksSkeleton() {
     return (
         <div className={`${shimmer} w-full items-center relative shadow-sm bg-white py-20 flex flex-col gap-4`}>
             {scrollImageSkeleton}
             {titleOfPage}
             <div className="w-96 h-4 rounded-full bg-gray-100"/>
-            <div className="flex flex-row items-center overflow-hidden gap-6 mt-6">
-                <div className="h-8 w-8 bg-gray-200 rounded-full"/>
-                <div className="bg-gray-50 p-4 flex flex-col gap-2 rounded-xl">
-                    <div className="w-20 h-3 bg-gray-100"/>
-                    <div className="w-18 h-3 bg-gray-100"/>
-                    <div className="w-15 h-3 bg-gray-100"/>
-                    <div className="w-20 h-3 bg-gray-100"/>
-                    <div className="w-18 h-3 bg-gray-100"/>
-                    <div className="w-15 h-3 bg-gray-100"/>
-                </div>
-                <div className="flex flex-col items-center gap-8">
-                    <div className="w-24 h-4 bg-gray-200 rounded-xl" />
-                    <div className="w-32 h-14 bg-gray-100 rounded-xl" />
-                    <div className="w-24 h-4 bg-gray-200 rounded-xl" />
-                </div>
-                <div className="h-8 w-8 bg-gray-200 rounded-full"/>
-            </div>
+            <ProjectSlideSkeleton />
         </div>
     )
 };

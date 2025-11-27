@@ -48,7 +48,7 @@ const SubmitForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className="flex flex-col justify-center gap-8 w-full px-28 my-10">
+    <form onSubmit={onSubmit} className="flex flex-col justify-center gap-8 w-full my-10">
       <div className="flex flex-col md:flex-row gap-8 self-center justify-center w-full md:w-sm">
         <input 
           name="name"

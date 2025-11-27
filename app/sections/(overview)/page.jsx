@@ -14,7 +14,7 @@ import Contact from "../contact/page";
 
 export default function Page() {
     return (
-        <main>
+        <main className="px-[4%] md:px-[8%] grid gap-12 py-12">
             <Suspense fallback={<HeroSkeleton />}>
                 <Hero />
             </Suspense>

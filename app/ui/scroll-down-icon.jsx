@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function ScrollDown({ pageToScroll }) {
     return (
-        <div className='w-full relative sm:flex items-center justify-center h-full hidden bottom-20'>
+        <div className='w-full relative md:flex items-center justify-center h-full hidden bottom-20'>
             <Link 
                 href={`#${pageToScroll}`}  
                 className='absolute border-2 border-Aqua-Neon rounded-2xl p-2 h-12'

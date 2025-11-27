@@ -1,11 +1,15 @@
 import { Suspense } from "react";
 import Footer from "./components/footer/page";
 import OverviewPage from "./sections/(overview)/page";
-import { FooterSkeleton } from "./ui/skeletons";
+import { FooterSkeleton, HeaderSkeleton } from "./ui/skeletons";
+import Header from "./components/header/page";
 
 export default function Page() {
   return (
     <main>
+      <Suspense fallback={<HeaderSkeleton />}>
+        <Header />
+      </Suspense>
       <OverviewPage />
       <Suspense fallback={<FooterSkeleton />}>
         <Footer />

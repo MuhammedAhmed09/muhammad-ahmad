@@ -49,7 +49,7 @@
     animation: floatModern linear infinite;
   }
 
-  .bubble-cyan { background-color: #12F7D6; }
+  .bubble-cyan { background-color: #121313; }
   .bubble-orange { background-color: #E54F26; }
 
   @keyframes floatModern {

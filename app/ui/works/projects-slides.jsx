@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Loading from '@/app/sections/(overview)/loading';
+import { ProjectSlideSkeleton } from '../skeletons';
 
 
 const Projects = ()  => {
@@ -24,10 +24,10 @@ const Projects = ()  => {
         navigation={true}
         modules={[Navigation]}
     >
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<ProjectSlideSkeleton />}>
             {projectItems.map((project) => (
-                <SwiperSlide key={project.id} className="w-full px-[2%] sm:px-[4%] md:p-0 ">
-                    <div className="flex items-center flex-row justify-center gap-4 px-[12%] sm:px-[14%]">
+                <SwiperSlide key={project.id} className="w-full">
+                    <div className="flex items-center flex-row justify-center gap-4 px-[7%] md:px-[14%]">
                         <p className="bg-Charcoal text-white w-2/5 text-sm rounded-2xl p-4">
                             {project.description}
                         </p>
@@ -39,7 +39,7 @@ const Projects = ()  => {
                                 className='absolute top-0'
                             > 
                                 <span className='text-Aqua-Neon font-semibold sm:text-xl'>{`<`}</span>
-                                GitHub 
+                                <span>GitHub</span>
                                 <span className='text-Aqua-Neon font-semibold sm:text-xl'>{` />`}</span>
                             </a>
                             <img
@@ -54,7 +54,7 @@ const Projects = ()  => {
                                 className='absolute bottom-0'
                             > 
                                 <span className='text-Aqua-Neon font-semibold sm:text-xl'>{`<`}</span>
-                                Demo 
+                                <span>Demo</span>
                                 <span className='text-Aqua-Neon font-semibold sm:text-xl'>{` />`}</span>
                             </a>
                         </div>
