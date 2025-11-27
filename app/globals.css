@@ -27,3 +27,55 @@
 .swiper-button-prev:hover {
   color: #00ff00;
 }
+
+
+@layer utilities {
+  /* Base container */
+  .modern-bubble-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    pointer-events: none;
+    overflow: hidden;
+    background: linear-gradient(135deg, #292F36 0%, #1A1E23 100%);
+  }
+
+  /* Floating Bubbles */
+  .modern-bubble {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(20px);
+    opacity: 0.58;
+    animation: floatModern linear infinite;
+  }
+
+  .bubble-cyan { background-color: #12F7D6; }
+  .bubble-orange { background-color: #E54F26; }
+
+  @keyframes floatModern {
+    0% { transform: translateY(100vh) scale(0.4); opacity: 0.1; }
+    50% { opacity: 0.15; }
+    100% { transform: translateY(-20vh) scale(1); opacity: 0; }
+  }
+
+  /* Thin animated scanlines overlay */
+  .scanlines-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.01) 0px,
+      rgba(255,255,255,0.01) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+    opacity: 0.8;
+    pointer-events: none;
+    animation: scanMove 12s linear infinite;
+  }
+
+  @keyframes scanMove {
+    50% { background-position-y: 2; }
+    100% { background-position-y: 8px; }
+  }
+}

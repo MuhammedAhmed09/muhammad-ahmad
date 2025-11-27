@@ -14,11 +14,9 @@ export default function Skills() {
     return (
     <section 
       id="skills" 
-      className={`
-        relative py-8 min-h-screen text-white font-sans bg-[url('/images/skills-bg.jpg')] bg-cover bg-center bg-no-repeat
-      `}
+      className="relative py-8 flex justify-center min-h-screen text-white font-sans"
     >
-      <div className="inset-0 z-0 absolute bg-Charcoal/50"></div>
+      {/* <div className="inset-0 z-0 absolute bg-[url('/images/skills-bg.jpg')] opacity-95 bg-cover bg-center bg-no-repeat"></div> */}
       <div 
         className="relative z-10 gap-8 flex items-center justify-center flex-col"
       >

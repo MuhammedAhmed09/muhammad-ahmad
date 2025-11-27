@@ -4,12 +4,12 @@ import Image from "next/image";
 export default function About() {
 
     return (
-    <section id="about" className={`relative py-8 px-[14%] lg:px-[8%] min-h-screen text-white font-sans bg-[url('/images/about-bg.jpg')]`}>
+    <section id="about" className={`py-8 px-[14%] lg:px-[8%] flex-col justify-center min-h-screen text-white font-sans`}>
       {/* BACK GROUND */}
-      <div className="inset-0 z-0 absolute bg-Mint-Light/5"></div>
+      {/* <div className="inset-0 z-0 absolute bg-[url('/images/about-bg.jpg')] opacity-98"></div> */}
       {/* ====BACK GROUND==== */}
 
-      <div className="flex gap-8 flex-col items-center justify-center relative z-10">
+      <div className="flex gap-8 flex-col items-center justify-center z-10">
         <div
           className="hidden md:flex"
         >

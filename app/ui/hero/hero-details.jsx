@@ -1,3 +1,4 @@
+'use client'
 import { Mail } from 'lucide-react'
 import Link from 'next/link'
 
@@ -11,7 +12,7 @@ const HeroDetails = () => {
   return (
     <section className='text-white gap-12 flex flex-col md:flex-row w-full'>
         <div
-            className='flex flex-col gap-8'
+            className='flex flex-col w-full gap-8'
         >
             <div className='text-2xl md:text-3xl'>
                 <span className='text-Aqua-Neon'>{`<h1>`}</span><br />
@@ -28,8 +29,16 @@ const HeroDetails = () => {
                 <span className='text-Aqua-Neon'>{`</p>`}</span>
             </div>
             <Link 
-                href='#contact' 
-                className='text-3xl md:text-4xl text-Aqua-Neon flex justify-start mx-5 items-center gap-4 transition-transform duration-300 hover:rotate-6'
+                href='#contact'
+                className='text-3xl w-auto md:text-4xl text-Aqua-Neon inline-flex justify-start ml-5 items-center gap-4 transition-transform duration-300 hover:rotate-6'
+                onClick={(e) => {
+                    e.preventDefault()
+
+                    if(typeof window !== "undefined") {
+                        const section = document.querySelector('#contact')
+                        section?.scrollIntoView({ behavior: 'smooth' })
+                    }
+                }}
             >
                 <p>Let's Talk</p> <p className='bg-neutral-700 rounded-full p-2'><Mail /></p>
             </Link>

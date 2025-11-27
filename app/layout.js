@@ -1,6 +1,7 @@
 import "./globals.css";
 import ubuntu from '@/app/ui/fonts';
 import Navbar from "./components/side-nav/page";
+import ModernBubbleBackground from "./ui/background";
 
 
 export const metadata = {
@@ -11,7 +12,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={ubuntu}>
+      <body className={`${ubuntu} relative overflow-x-hidden text-white`}>
+        <ModernBubbleBackground />
         <Navbar />
         {children}
       </body>

@@ -10,7 +10,7 @@ const Footer = () => {
     ];
          
   return (
-    <div className="bg-Dark-Navy lg:gap-20 gap-8 py-8 text-white/70 flex flex-col lg:flex-row-reverse justify-center items-center w-full">
+    <div className="lg:gap-20 gap-8 py-8 text-white/70 flex flex-col lg:flex-row-reverse justify-center items-center w-full">
         <div className="flex gap-8">
             {socialItems.map((item, index) => (
                 <Link 

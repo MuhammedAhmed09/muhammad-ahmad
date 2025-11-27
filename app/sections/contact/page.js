@@ -3,8 +3,9 @@ import { LineImage, ScrollImage } from "@/app/ui/images";
 
 export default function Contact() {
     return (
-     <section id="contact" className={`relative py-8  min-h-screen text-white font-sans bg-[url('/images/contact-bg.jpg')] bg-cover bg-center bg-no-repeat`}>
-      <div className="inset-0 z-0 absolute bg-Charcoal/50"></div>
+     <section id="contact" className={`relative py-8 flex justify-center min-h-screen text-white font-sans`}>
+      {/* <div className="inset-0 z-0 absolute bg-[url('/images/contact-bg.jpg')] opacity-95 bg-cover bg-center bg-no-repeat"/> */}
+
       <div className="relative z-10 gap-8 flex items-center justify-center flex-col">
         <div className="hidden md:flex">
           <ScrollImage />

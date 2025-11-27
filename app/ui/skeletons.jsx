@@ -5,17 +5,17 @@ export function HeaderSkeleton() {
     const linksMenu = (
         <div className="flex items-center ml-5 lg:gap-1">
             <div className="w-6 h-6 bg-gray-100 rounded-sm"/>
-            <div className="w-16 h-4 bg-gray-100 rounded-sm"/>
+            <div className="w-16 hidden md:flex h-4 bg-gray-100 rounded-sm"/>
         </div>
     )
     return(
-        <section className={`${shimmer} flex text-center w-full items-center justify-between px-[2%] sm:px-[5%] md:px-[7%] lg:px-[11%] relative shadow-sm border-b-2 border-gray-100`} >
+        <section className={`${shimmer} flex w-full items-center justify-between px-[2%] sm:px-[5%] md:px-[7%] lg:px-[11%] relative shadow-sm border-b-2 border-gray-100`} >
             <div className="inline-flex py-5 lg:py-7 items-center">
                 <span className="text-gray-300">{`<`}</span>
                 <div className="w-40 h-4 rounded-full bg-gray-100"/>
                 <span className="text-gray-300">{`/>`}</span>
             </div>
-            <div className="flex gap-x-7 items-center">
+            <div className="flex gap-x-7 items-center justify-center">
                 <div className="relative">
                     <div className="hidden md:flex rounded-full h-6 w-48 bg-gray-100"/>
                     <div className="relative md:hidden">
@@ -40,13 +40,15 @@ export function FooterSkeleton() {
         </div>
     )
     return(
-        <section className={`${shimmer} flex justify-center items-center w-full relative shadow-sm border-t-2 border-gray-100 lg:gap-20 gap-8 py-8 `} >
-            <div className="md:flex gap-8 md:gap-x-20">
+        <section className={`${shimmer} flex flex-col-reverse md:flex-row justify-center items-center w-full relative shadow-sm border-t-2 border-gray-100 lg:gap-20 gap-8 py-8 `} >
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-x-20">
                 <div className="w-72 h-4 bg-gray-100 rounded-full"/>
-                <div className="w-32 h-4 bg-gray-100 rounded-full"/>
-                <div className="w-44 h-4 bg-gray-100 rounded-full"/>
+                <div className="flex justify-between gap-3">
+                    <div className="w-32 h-4 bg-gray-100 rounded-full"/>
+                    <div className="w-44 h-4 bg-gray-100 rounded-full"/>
+                </div>
             </div>
-            <div className="flex gap-8" >
+            <div className="flex gap-8">
                 {linksMenu}
                 {linksMenu}
                 {linksMenu}
@@ -65,7 +67,7 @@ export function HeroCardDetailsSkeleton() {
     
     return (
         <section
-            className={`${shimmer} relative shadow-sm border-l-4 border-t-4 border-gray-300 rounded-tl-[154px]`}
+            className={`${shimmer} relative border-l-4 border-t-4 border-gray-300 rounded-tl-[154px]`}
         >
             <div className='bg-white border-4 border-gray-300 rounded-br-[150px] overflow-hidden rounded-tl-[150px] flex flex-col items-center justify-center gap-5 p-6'>
                 <div className='rounded-full w-20 h-20 border-2 border-gray-100 bg-gray-200'/>
@@ -106,7 +108,7 @@ export function HeroDetailsSkeleton() {
 
     return (
         <div
-            className={`${shimmer} flex flex-col md:flex-row gap-12 w-full`}
+            className={`${shimmer} flex flex-col md:flex-row gap-12 w-full overflow-x-clip`}
         >
             <div
                 className='flex flex-col gap-8 p-6'
@@ -187,7 +189,7 @@ const titleOfPage = (
 export function AboutSkeleton() {
     
     return(
-        <div className={`${shimmer} relative shadow-sm bg-white flex flex-col gap-6 py-20 p-2`}>
+        <div className={`${shimmer} relative shadow-sm bg-white flex flex-col gap-6 py-20 px-8 md:px-2`}>
             {scrollImageSkeleton}
             <div className="flex flex-col lg:flex-row gap-8 w-full justify-center">            
                 <div className="flex flex-col gap-8">
@@ -218,8 +220,8 @@ export function AboutSkeleton() {
 export function SkillsSkeleton() {
     const language = (
         <div className="flex flex-col gap-2 items-center"> 
-            <div className="flex items-center justify-center rounded-full p-10 bg-gray-50">
-                <div className="h-6 w-6 bg-gray-200 rounded-sm"/>
+            <div className="flex items-center justify-center rounded-full p-10 bg-gray-200">
+                <div className="h-6 w-6 bg-gray-100 rounded-sm"/>
             </div>
             <div className="bg-gray-200 h-3 w-10 rounded-xl"/>
         </div>
@@ -243,7 +245,7 @@ export function SkillsSkeleton() {
                     <div className="h-4 w-12 bg-gray-200 rounded-2xl"/>
                 </div>
             </div>
-            <div className="flex gap-3 flex-wrap overflow-hidden">
+            <div className="flex gap-3 flex-wrap overflow-hidden justify-center">
                 {language}
                 {language}
                 {language}
@@ -287,7 +289,7 @@ export function ContactSkeleton() {
         </div>
     )
     return (
-        <div className={`${shimmer} w-full items-center relative shadow-sm bg-white py-20 flex flex-col gap-4 overflow-hidden`}>
+        <div className={`${shimmer} w-full items-center relative shadow-sm bg-white py-20 flex flex-col gap-4 overflow-hidden px-8`}>
             {scrollImageSkeleton}
             {titleOfPage}
             <div className="w-96 h-4 rounded-full bg-gray-100"/>
@@ -299,6 +301,7 @@ export function ContactSkeleton() {
                 <div className="w-full">{input}</div>
             </div>
             <div className="w-full md:w-sm">{input}</div>
+            <div className="w-44 h-10 p-4 rounded-2xl bg-gray-200" />
         </div>
     )
 };

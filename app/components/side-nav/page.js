@@ -8,7 +8,7 @@ export default function Navbar() {
   const [hovered, setHovered] = useState(null);
 
   const pageItems = [
-    { label: "", icon: <LayoutGrid /> },
+    { label: "Hero", icon: <LayoutGrid /> },
     { label: "About", icon: <User /> },
     { label: "Skills", icon: <Code /> },
     { label: "Works", icon: <TvMinimal /> },    
@@ -27,6 +27,10 @@ export default function Navbar() {
           <Link
             href={`#${item.label.toLowerCase()}`}
             scroll={true}
+            onClick={(e)=> {
+              e.preventDefault()
+              document.querySelector(`#${item.label.toLowerCase()}`)?.scrollIntoView({ behavior: 'smooth'})
+            }}
             className={`text-white text-xl cursor-pointer`}
           > 
             {item.icon}
