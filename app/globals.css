@@ -1,17 +1,18 @@
 @import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 @theme {
-  --color-Charcoal: oklch(0.259 0.013 266.3); /* #292F36 */
-  --color-Dark-Navy: oklch(0.196 0.013 266.7); /* #1A1E23 */
-  --color-Vivid-Orange: oklch(0.637 0.233 34.3); /* #E54F26 */
-  --color-Aqua-Neon: oklch(0.888 0.182 174.1); /* #12F7D6 */
-  --color-Bright-Blue: oklch(0.558 0.107 254.9); /* #0C73B8 */
-  --color-Mint-Light: oklch(0.918 0.084 180.1); /* #98FAEC */
-  --color-Golden-Yellow: oklch(0.783 0.166 78.2); /* #E7A020 */
-  --color-Steel-Grey: oklch(0.326 0.014 270.9); /* #43454D */
-  --color-Sky-Blue: oklch(0.728 0.115 231.7); /* #28A9E0 */
+  --color-Charcoal: oklch(0.259 0.013 266.3);
+  --color-Dark-Navy: oklch(0.196 0.013 266.7);
+  --color-Vivid-Orange: oklch(0.637 0.233 34.3);
+  --color-Aqua-Neon: oklch(0.888 0.182 174.1);
+  --color-Bright-Blue: oklch(0.558 0.107 254.9);
+  --color-Mint-Light: oklch(0.918 0.084 180.1);
+  --color-Golden-Yellow: oklch(0.783 0.166 78.2);
+  --color-Steel-Grey: oklch(0.326 0.014 270.9);
+  --color-Sky-Blue: oklch(0.728 0.115 231.7);
 }
-
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -28,7 +29,6 @@
   color: #00ff00;
 }
 
-
 @layer utilities {
   /* Base container */
   .modern-bubble-bg {
@@ -40,9 +40,15 @@
     background: linear-gradient(135deg, #292F36 0%, #1A1E23 100%);
   }
 
+  .modern-bubble,
+  .scanlines-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -10; /* Keep behind content */
+  }
+
   /* Floating Bubbles */
   .modern-bubble {
-    position: absolute;
     border-radius: 50%;
     filter: blur(20px);
     opacity: 0.28;
@@ -60,8 +66,6 @@
 
   /* Thin animated scanlines overlay */
   .scanlines-overlay {
-    position: absolute;
-    inset: 0;
     background-image: repeating-linear-gradient(
       to bottom,
       rgba(255,255,255,0.03) 0px,

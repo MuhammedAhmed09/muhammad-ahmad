@@ -32,11 +32,12 @@ export default function About() {
             </div>
           </div>
 
-          <div className="flex justify-center">
+          <div className="relative justify-center">
             <Image 
               src="/images/muhammad-ahmad2.jpg" 
               alt="portfolio image for Muhammad Ahmad"
-              className="rounded-4xl h-auto"
+              className="rounded-4xl"          
+              style={{width: 'auto', height: 'auto', objectFit: 'cover'}}    
               width={500}
               height={700}
               loading="eager"
