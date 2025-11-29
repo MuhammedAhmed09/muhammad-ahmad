@@ -7,7 +7,7 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div>
-        <div className="flex flex-col gap-6 items-center my-4">
+        <div className="flex flex-col gap-6 my-4 mx-auto justify-self-center p-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-Mint-Light">
                 {project.title}
             </h2>

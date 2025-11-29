@@ -12,15 +12,15 @@ export default function About() {
           <ScrollImage />
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8 w-full justify-center">
+        <div className="flex flex-col lg:flex-row gap-8 w-full justify-center items-center">
           <div 
             className="flex flex-col gap-8"
           >
-            <p className="text-center sm:justify-start w-fit bg-Charcoal text-xl md:text-3xl py-2 px-8 border-4 border-Aqua-Neon rounded-tl-4xl rounded-br-4xl">
+            <p className="text-center sm:justify-start w-fit bg-Charcoal/50 text-xl md:text-3xl py-2 px-8 border-4 border-Aqua-Neon rounded-tl-4xl rounded-br-4xl">
               About me
             </p>
 
-            <div className="bg-Charcoal rounded-4xl p-5">
+            <div className="bg-Charcoal/70 rounded-4xl p-5">
               <span className="text-Aqua-Neon">{`<p>`}</span>
               <p className="text-Aqua-Neon text-2xl font-semibold translate-x-2">Hello!</p>
               <p className="my-2 translate-x-2">My name is Muhammad and I specialize in web developement 
@@ -32,14 +32,13 @@ export default function About() {
             </div>
           </div>
 
-          <div className="relative justify-center">
+          <div className="relative justify-center max-w-sm">
             <Image 
               src="/images/muhammad-ahmad2.jpg" 
               alt="portfolio image for Muhammad Ahmad"
-              className="rounded-4xl"          
-              style={{width: 'auto', height: 'auto', objectFit: 'cover'}}    
-              width={500}
-              height={700}
+              className="rounded-4xl"
+              width={1000}
+              height={1000}
               loading="eager"
             />
           </div>

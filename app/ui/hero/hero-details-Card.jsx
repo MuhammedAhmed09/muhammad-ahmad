@@ -22,7 +22,7 @@ const HeroCardDetails = () => {
     <section
         className='border-l-4 border-t-4 border-Aqua-Neon rounded-tl-[154px]'
     >
-        <div className='dark:bg-Charcoal text-sm dark:text-white border-4 dark:border-white rounded-br-[150px] rounded-tl-[150px] flex flex-col items-center justify-center gap-5 p-6'>
+        <div className='bg-Charcoal/40 text-sm text-white border-4 border-white rounded-br-[150px] rounded-tl-[150px] flex flex-col items-center justify-center gap-5 p-6'>
             <Image 
                 src='/images/muhammad-ahmad.jpg' 
                 alt='Portrait of Muhammad Ahmad, front-end developer'

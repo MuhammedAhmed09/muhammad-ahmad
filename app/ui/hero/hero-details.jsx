@@ -6,7 +6,7 @@ const HeroDetails = () => {
 
     const infoItems = [
         {id: 0, number: 4, label: 'Programmin Language'},
-        {id: 1, number: 6, label: `Development Tools`},
+        {id: 1, number: 6, label: 'Development Tools'},
         {id: 2, number: 2, label: 'Years of Experience'},
     ]
   return (
@@ -47,7 +47,7 @@ const HeroDetails = () => {
         <div 
             className='w-full flex justify-center'
         >
-            <div className='bg-Dark-Navy flex flex-col gap-14 justify-center w-60 h-fit items-center p-10 rounded-[25%]'>
+            <div className='bg-Dark-Navy/40 hover:shadow-lg transition flex flex-col gap-14 justify-center w-60 h-fit items-center p-10 rounded-[25%]'>
                 {infoItems.map((item) => (
                     <div key={item.id} className='flex gap-3 items-center text-lg text-white/80'>
                         <p className='text-Aqua-Neon text-6xl'>{item.number}</p>

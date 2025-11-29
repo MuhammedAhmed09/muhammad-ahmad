@@ -14,12 +14,14 @@ export default function Projects() {
   }
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative"> 
-      {projects.map((project) => (
-        <FloatingWrapper key={project.id}>
-          <ProjectCard project={project} />
-        </FloatingWrapper>
-      ))}
-    </div>
+    <main className="w-full flex justify-center items-center">
+      <div className="grid md:grid-cols-2 gap-8 justify-items-center">
+        {projects.map((project) => (
+          <FloatingWrapper key={project.id}>
+            <ProjectCard project={project} />
+          </FloatingWrapper>
+        ))}
+      </div>
+    </main>
   );
 }
